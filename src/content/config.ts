@@ -4,7 +4,6 @@ import { defineCollection, z } from "astro:content";
 
 import type { GiscusProps } from "@giscus/react";
 
-...
 
 export const GISCUS: GiscusProps = {
   repo: "PandaRedd/astrored",

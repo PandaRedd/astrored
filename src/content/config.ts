@@ -2,6 +2,23 @@ import { SITE } from "@config";
 import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 
+import type { GiscusProps } from "@giscus/react";
+
+...
+
+export const GISCUS: GiscusProps = {
+  repo: "PandaRedd/astrored",
+  repoId: "R_kgDONbrYgA",
+  category: "Announcements",
+  categoryId: "DIC_kwDONbrYgM4ClGnP",
+  mapping: "pathname",
+  reactionsEnabled: "0",
+  emitMetadata: "0",
+  inputPosition: "bottom",
+  lang: "en",
+  loading: "lazy",
+};
+
 const blog = defineCollection({
   type: "content_layer",
   loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
